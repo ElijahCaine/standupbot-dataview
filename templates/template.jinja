@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+{% if name == None %}
+  {% for k in d %}
+  <p> {{ k }} </p>
+    <ol>
+    {% for l in d[k] %}
+      <li>{{ l['time'] }}
+        <ul style='list-stype-type: none;'>
+          <li>{{ l['status'] }}</li>
+        </ul>
+      </li>
+    {% endfor %}
+    </ol>
+  {% endfor %}
+{% else %}
+  <p> {{ name }} </p>
+    <ol>
+    {% for l in d[name] %}
+      <li>{{ l['time'] }}
+        <ul style='list-stype-type: none;'>
+          <li>{{ l['status'] }}</li>
+        </ul>
+      </li>
+    {% endfor %}
+    </ol>
+{% endif %}
+</body>
